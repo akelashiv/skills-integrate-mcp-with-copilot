@@ -16,7 +16,6 @@
       <section id="activities-container">
         <h3>Available Activities</h3>
         <div id="activities-list">
-          <!-- Activities will be loaded here -->
           <p>Loading activities...</p>
         </div>
       </section>
@@ -32,19 +31,58 @@
             <label for="activity">Select Activity:</label>
             <select id="activity" required>
               <option value="">-- Select an activity --</option>
-              <!-- Activity options will be loaded here -->
             </select>
           </div>
           <button type="submit">Sign Up</button>
         </form>
-        <div id="message" class="hidden"></div>
       </section>
+
+      <section id="tasks-container">
+        <h3>Task List</h3>
+        <div id="tasks-list">Loading tasks...</div>
+
+        <h3>Create / Update Task</h3>
+        <form id="task-form">
+          <input type="hidden" id="task-id" />
+          <div class="form-group">
+            <label for="task-title">Title</label>
+            <input type="text" id="task-title" required />
+          </div>
+          <div class="form-group">
+            <label for="task-description">Description</label>
+            <textarea id="task-description"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="task-date">Date & Time</label>
+            <input type="text" id="task-date" placeholder="YYYY-MM-DD HH:MM" />
+          </div>
+          <div class="form-group">
+            <label for="task-priority">Priority</label>
+            <select id="task-priority">
+              <option value="low">low</option>
+              <option value="medium" selected>medium</option>
+              <option value="high">high</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="task-status">Status</label>
+            <select id="task-status">
+              <option value="todo">todo</option>
+              <option value="in progress">in progress</option>
+              <option value="done">done</option>
+            </select>
+          </div>
+          <button type="submit">Save Task</button>
+          <button type="button" id="cancel-task" style="margin-left: 8px;">Cancel</button>
+        </form>
+      </section>
+
+      <div id="message" class="hidden"></div>
     </main>
 
     <footer>
       <p>&copy; 2026 Mergington High School</p>
     </footer>
-
     <script src="app.js"></script>
   </body>
 </html>
